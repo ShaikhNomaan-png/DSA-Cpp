@@ -1,0 +1,905 @@
+Perfect 🔥
+You want **30+ placement interview questions on OOP in C++** with **answers** — covering **simple, medium, and hard levels**.
+
+Here’s a **comprehensive set** of questions you can directly prepare from 👇
+
+---
+
+# 📘 OOP in C++ – Interview Q&A
+
+---
+
+## 🟢 SIMPLE LEVEL (Basics)
+
+### 1. What is OOP?
+
+**Answer:**
+Object-Oriented Programming (OOP) organizes programs into **objects** (real-world entities) that contain both **data** (attributes) and **functions** (methods).
+
+---
+
+### 2. What are the four main pillars of OOP?
+
+**Answer:**
+
+1. Encapsulation
+2. Abstraction
+3. Inheritance
+4. Polymorphism
+
+---
+
+### 3. What is the difference between a **class** and an **object**?
+
+**Answer:**
+
+* **Class** → Blueprint/template.
+* **Object** → Instance of a class.
+
+---
+
+### 4. What is Encapsulation? Give an example.
+
+**Answer:**
+Encapsulation = Wrapping data + methods into one unit (class) and restricting direct access to data using private members. Example: Bank Account class with private balance and public deposit/withdraw methods.
+
+---
+
+### 5. Difference between Abstraction and Encapsulation?
+
+**Answer:**
+
+* **Encapsulation**: Hides data, achieved via access specifiers (private/public).
+* **Abstraction**: Hides implementation, achieved via abstract classes and virtual functions.
+
+---
+
+### 6. What are Access Specifiers in C++?
+
+**Answer:**
+
+* `public`: Accessible everywhere.
+* `protected`: Accessible in class + derived class.
+* `private`: Accessible only within class.
+
+---
+
+### 7. Difference between Structure and Class in C++?
+
+**Answer:**
+
+* **struct** → members public by default.
+* **class** → members private by default.
+
+---
+
+### 8. What is a Constructor? Types?
+
+**Answer:**
+
+* Special function called when object is created.
+* Types: Default, Parameterized, Copy constructor.
+
+---
+
+### 9. What is a Destructor?
+
+**Answer:**
+
+* Special function (`~ClassName()`) automatically called when object is destroyed.
+
+---
+
+### 10. Difference between Compile-time and Run-time polymorphism?
+
+**Answer:**
+
+* **Compile-time** → Function overloading, Operator overloading.
+* **Run-time** → Function overriding using virtual functions.
+
+---
+
+---
+
+## 🟡 MEDIUM LEVEL (Conceptual + Coding Related)
+
+### 11. What is Function Overloading?
+
+**Answer:**
+Two or more functions with the same name but different parameter lists. Resolved at compile time.
+
+---
+
+### 12. What is Operator Overloading?
+
+**Answer:**
+Redefining C++ operators for user-defined types (e.g., `+` for Complex numbers).
+
+---
+
+### 13. What is Function Overriding?
+
+**Answer:**
+Derived class provides its own implementation of a base class virtual function.
+
+---
+
+### 14. What is the difference between Overloading and Overriding?
+
+**Answer:**
+
+* Overloading → Compile-time, same name, different parameters.
+* Overriding → Run-time, same name/signature, requires virtual keyword.
+
+---
+
+### 15. What are Virtual Functions?
+
+**Answer:**
+Functions declared with `virtual` in base class, meant to be overridden in derived class. They support run-time polymorphism.
+
+---
+
+### 16. What is a Pure Virtual Function?
+
+**Answer:**
+`virtual void f() = 0;` → Must be implemented by derived classes. Makes the class **abstract**.
+
+---
+
+### 17. What is an Abstract Class?
+
+**Answer:**
+A class containing at least one pure virtual function. Cannot create objects of it.
+
+---
+
+### 18. What are Static Members?
+
+**Answer:**
+
+* **Static variable** → Shared by all objects.
+* **Static function** → Can be called without an object, but only access static members.
+
+---
+
+### 19. What is a Friend Function?
+
+**Answer:**
+A non-member function that can access private/protected members of a class. Declared with `friend`.
+
+---
+
+### 20. What is Inheritance? Types?
+
+**Answer:**
+One class (derived) acquires properties/methods of another class (base).
+Types: Single, Multiple, Multilevel, Hierarchical, Hybrid.
+
+---
+
+### 21. Explain the Diamond Problem in C++.
+
+**Answer:**
+Occurs in multiple inheritance when a derived class inherits from two classes that inherit the same base → ambiguity. Solved using **virtual inheritance**.
+
+---
+
+### 22. What is the order of constructor/destructor calls in inheritance?
+
+**Answer:**
+
+* Constructor: **Base → Derived**.
+* Destructor: **Derived → Base**.
+
+---
+
+### 23. What is the difference between Shallow Copy and Deep Copy?
+
+**Answer:**
+
+* **Shallow Copy**: Copies only values (pointers point to same memory).
+* **Deep Copy**: Creates a new copy of dynamically allocated memory.
+
+---
+
+### 24. What is a Copy Constructor?
+
+**Answer:**
+A constructor that initializes an object using another object of the same class.
+
+---
+
+### 25. What is Virtual Destructor?
+
+**Answer:**
+A destructor declared `virtual` in base class ensures derived destructor is called when deleting via base pointer.
+
+---
+
+### 26. What are the advantages of OOP?
+
+**Answer:**
+
+* Code reusability (Inheritance)
+* Data security (Encapsulation)
+* Flexibility (Polymorphism)
+* Clear structure (Abstraction)
+
+---
+
+---
+
+## 🔴 HARD LEVEL (Tricky / Advanced)
+
+### 27. What is the difference between early binding and late binding?
+
+**Answer:**
+
+* Early binding (compile-time) → function call resolved at compile time (normal functions, overloading).
+* Late binding (runtime) → function call resolved at runtime (virtual functions).
+
+---
+
+### 28. Explain Virtual Table (V-Table) in C++.
+
+**Answer:**
+When a class has virtual functions, compiler creates a V-Table (lookup table of function pointers). At runtime, derived class’s function is invoked via this table.
+
+---
+
+### 29. Can a constructor be virtual?
+
+**Answer:**
+❌ No.
+Reason: Constructors are responsible for object creation, which must be resolved at compile time.
+
+---
+
+### 30. Can a destructor be virtual?
+
+**Answer:**
+✅ Yes.
+Used in inheritance to ensure derived destructors run properly when deleting objects via base pointer.
+
+---
+
+### 31. Can we achieve multiple inheritance in C++? How is ambiguity resolved?
+
+**Answer:**
+✅ Yes.
+Ambiguity (Diamond Problem) is resolved using `virtual` keyword in inheritance.
+
+---
+
+### 32. Difference between Interface and Abstract Class in C++?
+
+**Answer:**
+
+* **Abstract Class**: Can have data + functions + pure virtual functions.
+* **Interface** (in C++ terms): A class with only pure virtual functions.
+
+---
+
+### 33. Why do we need encapsulation if we already have access specifiers?
+
+**Answer:**
+Encapsulation = logical grouping of data + methods in a class. Access specifiers provide levels of control within that encapsulation.
+
+---
+
+### 34. Can we overload the `main()` function in C++?
+
+**Answer:**
+Technically yes, but the system only calls `int main()`, so overloading is useless.
+
+---
+
+### 35. Can static functions be virtual?
+
+**Answer:**
+❌ No.
+Reason: Virtual functions require runtime binding (via V-Table), but static functions are class-level and resolved at compile time.
+
+---
+
+### 36. Can we have virtual constructors or friend constructors?
+
+**Answer:**
+❌ No virtual constructors.
+❌ Friend constructors are not allowed.
+
+---
+
+### 37. Can a base class pointer point to derived class object?
+
+**Answer:**
+✅ Yes. (Upcasting). Useful for runtime polymorphism.
+
+---
+
+### 38. Can a derived class pointer point to base class object?
+
+**Answer:**
+❌ Not directly (Downcasting). Requires explicit cast.
+
+---
+
+### 39. What is Object Slicing in C++?
+
+**Answer:**
+When a derived object is assigned to a base object, extra (derived-specific) members are sliced off.
+
+---
+
+### 40. Explain differences between OOP and POP.
+
+**Answer:**
+
+* OOP → Object based, data security, reusability.
+* POP → Function based, no data security, difficult reusability.
+
+## 🟢 SIMPLE / REVISION-BASED
+
+### 41. Can a class have more than one constructor?
+
+**Answer:** Yes (Constructor Overloading). You can have default, parameterized, and copy constructors.
+
+---
+
+### 42. What is a Destructor Overloading?
+
+**Answer:** ❌ Not allowed in C++. A class can only have one destructor.
+
+---
+
+### 43. Can we call a constructor explicitly?
+
+**Answer:** Yes. Example:
+
+```cpp
+Student s = Student("Rahul");
+```
+
+---
+
+### 44. What is the default access specifier for members of a class?
+
+**Answer:** **Private**.
+
+---
+
+### 45. What is the default access specifier for members of a struct?
+
+**Answer:** **Public**.
+
+---
+
+### 46. What is the use of the `this` pointer?
+
+**Answer:**
+
+* Refers to the current object.
+* Used to resolve name conflicts.
+* Used in returning the current object (`return *this;`).
+
+---
+
+### 47. Can we declare a class inside another class?
+
+**Answer:** Yes → Called **Nested Class**.
+
+---
+
+### 48. What is the size of an empty class in C++?
+
+**Answer:** **1 byte** (to ensure unique addresses for objects).
+
+---
+
+### 49. Can constructors be inherited?
+
+**Answer:** Yes, since C++11 → **Constructor Inheritance** using `using Base::Base;`.
+
+---
+
+### 50. Can we overload the assignment operator (`=`)?
+
+**Answer:** Yes, for user-defined deep copy implementation.
+
+---
+
+---
+
+## 🟡 MEDIUM / PRACTICAL
+
+### 51. What is the difference between new/delete and malloc/free?
+
+**Answer:**
+
+* `new/delete` → C++, call constructor/destructor, type-safe.
+* `malloc/free` → C, don’t call constructors/destructors.
+
+---
+
+### 52. Can we make a constructor private? Why?
+
+**Answer:** Yes. Example: **Singleton Pattern** → ensures only one instance of a class exists.
+
+---
+
+### 53. What is a Singleton Class?
+
+**Answer:**
+A class that allows only one object to be created. Achieved by:
+
+* Private constructor.
+* Static function returning the instance.
+
+---
+
+### 54. What is the difference between deep copy and shallow copy in copy constructor?
+
+**Answer:**
+
+* **Shallow copy**: Copies only pointer values (dangerous).
+* **Deep copy**: Creates a new copy of allocated memory (safe).
+
+---
+
+### 55. Can constructors be virtual?
+
+**Answer:** ❌ No. Virtual dispatch works only after an object exists, but constructor is for creation.
+
+---
+
+### 56. Can destructors be overloaded?
+
+**Answer:** ❌ No. Only one destructor allowed.
+
+---
+
+### 57. Can we overload main() in C++?
+
+**Answer:** Technically yes, but OS always calls the standard `int main()` entry point, so overloads are ignored.
+
+---
+
+### 58. What is object slicing?
+
+**Answer:** Assigning a derived object to a base object → extra members from derived class are sliced off.
+
+---
+
+### 59. Can static member functions be virtual?
+
+**Answer:** ❌ No. Static functions don’t belong to an object, and virtual dispatch needs objects.
+
+---
+
+### 60. Can we override static functions?
+
+**Answer:** ❌ No. They are not tied to objects, so no polymorphism.
+
+---
+
+---
+
+## 🔴 HARD / TRICKY
+
+### 61. What happens if we don’t declare a destructor in a class?
+
+**Answer:** Compiler generates a **default destructor** automatically.
+
+---
+
+### 62. What happens if a base class destructor is not virtual?
+
+**Answer:** When deleting a derived object via base pointer, only base destructor is called → possible memory leak.
+
+---
+
+### 63. Can we achieve runtime polymorphism without virtual functions?
+
+**Answer:** ❌ Not in traditional sense. Virtual functions are the mechanism for runtime polymorphism.
+
+---
+
+### 64. Can we make a class abstract without a pure virtual function?
+
+**Answer:** Yes, by making the constructor private/protected so objects cannot be created.
+
+---
+
+### 65. Can an abstract class have a constructor?
+
+**Answer:** ✅ Yes. Abstract classes can have constructors, which are called when derived objects are created.
+
+---
+
+### 66. What is a Virtual Base Class?
+
+**Answer:** A base class that is inherited **virtually** to avoid multiple copies of it in hybrid/multiple inheritance (solves Diamond Problem).
+
+---
+
+### 67. Can we override a non-virtual function?
+
+**Answer:** No. If function is not virtual in base, derived redefines it, but no polymorphism (resolved at compile time).
+
+---
+
+### 68. What is the difference between interface in Java and abstract class in C++?
+
+**Answer:**
+
+* **Java interface** = only abstract methods.
+* **C++ abstract class** = can have data + normal functions + pure virtual functions.
+
+---
+
+### 69. What are covariant return types in C++?
+
+**Answer:** In overriding, base and derived functions can return different types, but derived return must be a pointer/reference to a derived type.
+
+---
+
+### 70. What is Multiple Dispatch?
+
+**Answer:** C++ supports **single dispatch** (function call decided by type of one object). Multiple dispatch (based on multiple objects) is not supported natively.
+
+---
+
+### 71. Can constructor throw an exception?
+
+**Answer:** ✅ Yes. If exception occurs, destructor of already constructed members will be called automatically.
+
+---
+
+### 72. Can we use `virtual` with friend functions?
+
+**Answer:** ❌ No. Friend functions are not members of class, so they cannot be virtual.
+
+---
+
+### 73. Can a pure virtual function have a body?
+
+**Answer:** ✅ Yes. Even though it’s pure (`=0`), it can still have a definition outside class.
+
+---
+
+### 74. Can an abstract class have a destructor?
+
+**Answer:** ✅ Yes. In fact, it’s good practice to have a **virtual destructor** in abstract classes.
+
+---
+
+### 75. What is the use of the `explicit` keyword in constructors?
+
+**Answer:** Prevents implicit conversions during object creation.
+
+---
+
+### 76. Can we inherit constructors?
+
+**Answer:** ✅ Yes, using `using Base::Base;` in derived class (C++11 onwards).
+
+---
+
+### 77. Can a class be both abstract and concrete at the same time?
+
+**Answer:** ❌ No. An abstract class cannot be instantiated.
+
+---
+
+### 78. What are smart pointers in C++?
+
+**Answer:** Objects that manage memory automatically. Examples: `unique_ptr`, `shared_ptr`, `weak_ptr`.
+
+---
+
+### 79. Difference between `virtual` and `override` keywords in C++11.
+
+**Answer:**
+
+* `virtual` → Declares a method as overridable.
+* `override` → Ensures a method is overriding a base class virtual function.
+
+---
+
+### 80. What is RAII in C++?
+
+**Answer:** **Resource Acquisition Is Initialization** → Technique where resources (memory, file, DB connection) are tied to object lifetime (constructor acquires, destructor releases).
+
+## 🟢 SIMPLE / REVISION QUESTIONS
+
+### 81. Can a class inherit privately from another class?
+
+**Answer:** Yes. In private inheritance, public and protected members of base become **private** in derived class.
+
+---
+
+### 82. What is the difference between public, protected, and private inheritance?
+
+**Answer:**
+
+| Type      | Base public | Base protected | Base private |
+| --------- | ----------- | -------------- | ------------ |
+| Public    | public      | protected      | inaccessible |
+| Protected | protected   | protected      | inaccessible |
+| Private   | private     | private        | inaccessible |
+
+---
+
+### 83. Can we have multiple constructors with default parameters?
+
+**Answer:** Yes, but may cause ambiguity if not careful.
+
+---
+
+### 84. What is the use of `mutable` keyword?
+
+**Answer:** Allows a class member to be modified even in a `const` object.
+
+---
+
+### 85. Difference between `const` object and normal object?
+
+**Answer:**
+
+* `const` object → Cannot modify member variables (except `mutable`) and cannot call non-const functions.
+
+---
+
+### 86. Can a class have constant member functions?
+
+**Answer:** Yes. Declared as:
+
+```cpp
+void func() const;  // cannot modify data members
+```
+
+---
+
+### 87. Can we make a class constant?
+
+**Answer:** No. But we can declare objects as `const`.
+
+---
+
+### 88. Can a virtual function be static?
+
+**Answer:** ❌ No. Virtual requires object, static is class-level.
+
+---
+
+### 89. Difference between `this` pointer and reference?
+
+**Answer:**
+
+* `this` → pointer to current object.
+* Reference → alias to object (can be used to avoid copying).
+
+---
+
+### 90. Can destructors throw exceptions?
+
+**Answer:** Should **not throw exceptions**; if they do, program may terminate.
+
+---
+
+## 🟡 MEDIUM / CONCEPTUAL
+
+### 91. Difference between early binding and late binding?
+
+**Answer:**
+
+* Early binding → compile-time, normal function calls.
+* Late binding → runtime, virtual functions.
+
+---
+
+### 92. What is Covariant Return Type?
+
+**Answer:** Return type in overridden function in derived class can be a **pointer/reference to derived type**, while base function returns base type.
+
+---
+
+### 93. Can we assign base class object to derived class object?
+
+**Answer:** ❌ Direct assignment → object slicing occurs.
+
+---
+
+### 94. Can a friend function be inherited?
+
+**Answer:** ❌ No. Friend function is not a member, cannot be inherited.
+
+---
+
+### 95. Can a friend function be virtual?
+
+**Answer:** ❌ No, friend functions are not members of the class.
+
+---
+
+### 96. Can we make a virtual function pure virtual and provide definition?
+
+**Answer:** ✅ Yes, `virtual void f() = 0;` can have a body outside the class.
+
+---
+
+### 97. What is a nested class?
+
+**Answer:** A class defined inside another class. It can access **private/protected** members of the outer class only if declared friend.
+
+---
+
+### 98. Difference between `struct` and `class` inheritance?
+
+**Answer:** Default inheritance:
+
+* `class` → private
+* `struct` → public
+
+---
+
+### 99. Can we override a static function?
+
+**Answer:** ❌ No. Static functions are class-level → resolved at compile-time.
+
+---
+
+### 100. Can we inherit constructors in C++?
+
+**Answer:** ✅ Yes, using `using Base::Base;` (C++11).
+
+---
+
+### 101. Difference between abstract class and interface?
+
+**Answer:**
+
+* Abstract class → can have data + normal + pure virtual functions.
+* Interface → only pure virtual functions (like a contract).
+
+---
+
+### 102. What is object slicing?
+
+**Answer:** Assigning derived object to base object → derived-specific members are lost.
+
+---
+
+## 🔴 HARD / TRICKY QUESTIONS
+
+### 103. How many V-Tables are created in multiple inheritance?
+
+**Answer:** One V-Table per **class with virtual functions**, multiple in multiple inheritance.
+
+---
+
+### 104. Can private members be inherited?
+
+**Answer:** Yes, but not accessible directly in derived class. Accessible via public/protected functions.
+
+---
+
+### 105. Can virtual functions be constructors?
+
+**Answer:** ❌ No. Constructors are responsible for object creation, cannot be virtual.
+
+---
+
+### 106. What happens when you delete a base pointer pointing to a derived object without virtual destructor?
+
+**Answer:** Only base destructor is called → derived members may not be freed → memory leak.
+
+---
+
+### 107. Can we have a class with all members static?
+
+**Answer:** ✅ Yes. Cannot create object unless constructor exists, but class can act as a **utility class**.
+
+---
+
+### 108. Can we override an inline function?
+
+**Answer:** ✅ Yes. Derived class can override. Compiler may or may not inline it.
+
+---
+
+### 109. Difference between composition and inheritance?
+
+**Answer:**
+
+* **Composition:** “Has-a” relationship (Car has Engine).
+* **Inheritance:** “Is-a” relationship (Dog is Animal).
+
+---
+
+### 110. Can virtual functions be friend?
+
+**Answer:** ❌ No. Friend functions are not class members.
+
+---
+
+### 111. What is the Diamond Problem? Example?
+
+**Answer:**
+
+* Occurs in multiple inheritance when two base classes inherit the same class → ambiguity.
+* Solved using **virtual inheritance**.
+
+---
+
+### 112. Difference between deep copy and shallow copy?
+
+**Answer:**
+
+* **Shallow copy:** Pointer values copied → shared memory → risk of double delete.
+* **Deep copy:** Memory duplicated → safe.
+
+---
+
+### 113. Can we have an object of abstract class?
+
+**Answer:** ❌ No. But pointer/reference to abstract class is allowed.
+
+---
+
+### 114. Can we inherit from multiple abstract classes?
+
+**Answer:** ✅ Yes. Derived class must implement all pure virtual functions.
+
+---
+
+### 115. Can we override non-virtual functions?
+
+**Answer:** Yes, but no runtime polymorphism occurs.
+
+---
+
+### 116. Difference between virtual inheritance and normal inheritance?
+
+**Answer:**
+
+* Virtual inheritance → only one copy of base in multi-level/multiple inheritance.
+* Normal inheritance → multiple copies possible → ambiguity.
+
+---
+
+### 117. What is RAII in C++?
+
+**Answer:** **Resource Acquisition Is Initialization** → acquire resource in constructor, release in destructor.
+
+---
+
+### 118. Difference between public inheritance and private inheritance in polymorphism?
+
+**Answer:**
+
+* Public inheritance → base pointer can point to derived objects → runtime polymorphism works.
+* Private inheritance → base pointer cannot point to derived objects → no polymorphism.
+
+---
+
+### 119. Can we create arrays of abstract class objects?
+
+**Answer:** ❌ No. Only pointers/references allowed.
+
+---
+
+### 120. Can we have a virtual copy constructor?
+
+**Answer:** ❌ No. Copy constructors cannot be virtual.
+
+---
+
+✅ With these, you now have **over 120+ placement-focused OOP questions and answers**, covering **all levels from simple to hard**, including tricky **C++ specifics**.
+
+---
+
+I can also create a **“Top 50 OOP C++ coding & output questions”** (like short programs, predict output, debug errors) which is extremely common in **interviews for placements**.
+
+Do you want me to make that next?

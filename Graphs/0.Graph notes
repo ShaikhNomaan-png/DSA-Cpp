@@ -1,0 +1,163 @@
+**Graph: Detailed Definitions and Concepts**
+
+### **1️⃣ What is a Graph?**
+
+A **graph** is a **data structure** that consists of:
+
+* **Vertices (or nodes):** Fundamental units (points).
+* **Edges (or arcs):** Connections between vertices.
+
+Formally:
+A graph $G$ is defined as:
+
+$$
+G = (V, E)
+$$
+
+Where:
+
+* $V$ = set of vertices $\{v_1, v_2, ..., v_n\}$
+* $E$ = set of edges $\{(v_i, v_j), ...\}$
+
+**Example:**
+Vertices = `{A, B, C, D}`
+Edges = `{(A, B), (A, C), (B, D)}`
+
+Graphically:
+
+```
+   A
+  / \
+ B   C
+ |
+ D
+```
+
+---
+
+### **2️⃣ Types of Graphs**
+
+#### **A. Based on Direction**
+
+1. **Undirected Graph**
+
+   * Edges have **no direction**.
+   * Edge `(A, B)` = `(B, A)`.
+   * Example: Social networks (friendships).
+
+2. **Directed Graph (Digraph)**
+
+   * Edges have **direction** (arrows).
+   * Edge `(A, B)` ≠ `(B, A)`.
+   * Example: Twitter follow graph, task scheduling.
+
+---
+
+#### **B. Based on Edge Weights**
+
+1. **Weighted Graph**
+
+   * Each edge has a **weight or cost** (distance, time, price).
+   * Example: Road networks.
+
+2. **Unweighted Graph**
+
+   * All edges are considered equal (weight = 1).
+
+---
+
+#### **C. Special Graphs**
+
+1. **Complete Graph (Kn)**
+
+   * Every vertex is connected to **all other vertices**.
+   * Number of edges = `n*(n-1)/2` for undirected.
+
+2. **Cycle Graph**
+
+   * Forms a **closed loop**.
+
+3. **Tree**
+
+   * A **connected, acyclic, undirected graph**.
+   * Example: Organization hierarchy.
+
+4. **Bipartite Graph**
+
+   * Vertices divided into 2 sets; edges connect **vertices of different sets**.
+   * Example: Jobs ↔ Workers matching.
+
+---
+
+### **3️⃣ Graph Terminology**
+
+| Term                 | Meaning                                           |
+| -------------------- | ------------------------------------------------- |
+| Vertex (Node)        | Basic unit of graph                               |
+| Edge                 | Connection between vertices                       |
+| Degree of Vertex     | Number of edges incident to vertex                |
+| In-degree            | Number of incoming edges (directed)               |
+| Out-degree           | Number of outgoing edges (directed)               |
+| Adjacent Vertices    | Vertices connected by an edge                     |
+| Path                 | Sequence of edges connecting vertices             |
+| Cycle                | Path that starts & ends at same vertex            |
+| Connected Graph      | Every vertex can reach every other vertex         |
+| Disconnected Graph   | At least two vertices cannot reach each other     |
+| Connected Components | Maximal connected subgraphs in disconnected graph |
+| Subgraph             | A subset of graph vertices & edges                |
+
+---
+
+### **4️⃣ Graph Representations**
+
+#### **A. Adjacency Matrix**
+
+* 2D array `adj[n][n]` where `adj[i][j] = 1` if edge exists, `0` otherwise.
+* Pros: Easy to implement, fast lookup.
+* Cons: Wastes space for sparse graphs (`O(V^2)`).
+
+#### **B. Adjacency List**
+
+* Array of lists. `adj[i]` stores all vertices adjacent to `i`.
+* Pros: Space efficient (`O(V+E)`), good for sparse graphs.
+* Cons: Slower to check if edge exists between two vertices.
+
+---
+
+### **5️⃣ Graph Traversal**
+
+1. **Breadth-First Search (BFS)**
+
+   * Explores **level by level** using a **queue**.
+   * Good for **shortest path in unweighted graphs**.
+
+2. **Depth-First Search (DFS)**
+
+   * Explores **as deep as possible** along each branch using **recursion or stack**.
+   * Good for **connected components, cycle detection**.
+
+---
+
+### **6️⃣ Connected Components**
+
+* A **connected component** is a **maximal set of vertices** such that **each pair of vertices is connected**.
+* For **undirected graphs**, use **DFS/BFS** to find components.
+* Number of components = number of isolated subgraphs.
+
+---
+
+### **7️⃣ Applications of Graphs**
+
+1. Social networks (Facebook, LinkedIn)
+2. Route planning / GPS (Weighted graphs)
+3. Web page link structure (Directed graphs)
+4. Task scheduling (DAG – Directed Acyclic Graph)
+5. Network flow problems (Max-flow, Min-cut)
+6. Computer vision & AI (Graph-based ML, image segmentation)
+
+---
+
+If you want, I can **draw a single “Graph Concept Map” diagram** showing **all definitions, types, and traversals visually**—super useful for **placement and interview memory recall**.
+
+Do you want me to make that diagram?
+
